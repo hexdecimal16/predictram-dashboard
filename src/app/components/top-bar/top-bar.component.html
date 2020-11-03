@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img src="https://www.predictram.com/public/images/logo1.png" width="90" height="30" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" id="home">
+                <a class="nav-link" (click)="changeTab(0)">Home</a>
+            </li>
+            <li class="nav-item" id="news">
+                <a class="nav-link" (click)="changeTab(3)">News</a>
+            </li>
+            <li class="nav-item" id="corporate">
+                <a class="nav-link" (click)="changeTab(4)">Corporate</a>
+            </li>
+            <li class="nav-item" id="nifty">
+                <a class="nav-link" (click)="changeTab(5)">Nifty</a>
+            </li>
+            <li class="nav-item dropdown" id="polls">
+                <a class="nav-link dropdown-toggle polls" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Forecast
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)="changeTab(6)">Economic Forecast</a>
+                  <a class="dropdown-item" (click)="changeTab(7)">Financial Forecast</a>             
+                   </div>
+              </li>
+        </ul>
+        <form class="form-inline" (submit)="search()">
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" (mouseout)="search()"  (keyup)="search()" [(ngModel)]="searchText">
+          </form>
+    </div>
+</nav>

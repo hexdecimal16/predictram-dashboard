@@ -1,0 +1,6 @@
+<app-top-bar></app-top-bar>
+<app-home *ngIf="tabs.tabIndex == 0"></app-home>
+<app-news *ngIf="tabs.tabIndex == 3"></app-news>
+<app-corporate *ngIf="tabs.tabIndex == 4"></app-corporate>
+<app-nifty *ngIf="tabs.tabIndex == 5"></app-nifty>
+<app-polls *ngIf="tabs.tabIndex == 6 || tabs.tabIndex == 7"></app-polls>

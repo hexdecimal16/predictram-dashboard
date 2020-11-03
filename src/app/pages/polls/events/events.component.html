@@ -1,0 +1,30 @@
+<div class="tbl table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Event Name</th>
+                <th scope="col">End Date/Time</th>
+                <th scope="col">Status</th>
+                <th scope="col">Total Votes</th>
+                <th scope="col">Options</th>
+                <th scope="col">Option 1</th>
+                <th scope="col">Option 2</th>
+                <th scope="col">Option 3</th>
+                <th scope="col">Option 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let poll of s.polls ;  let i = index" >
+                <td *ngIf="poll.pollType != 'ec_event'" style="text-align: left;">{{ poll.pollQues  }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'" >{{ poll.endDate }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.pollAcceptStatus }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.totalVotes }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.pollOptions | replace : '[#^]' : ','  }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.option1 }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.option2 }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.option3 }}</td>
+                <td *ngIf="poll.pollType != 'ec_event'">{{ poll.option4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

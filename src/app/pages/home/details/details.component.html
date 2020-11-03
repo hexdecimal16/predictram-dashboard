@@ -1,0 +1,586 @@
+<body>
+    <div class="flex-container row">
+        <div class="flex-item">
+            <div class="backBtn" (click)="details.showDetails = 0">
+                <span class="line tLine"></span>
+                <span class="line mLine"></span>
+                <span class="label">Back to list</span>
+                <span class="line bLine"></span>
+                <span class="line bLine"></span>
+            </div>
+        </div>
+        <div class="flex-item">
+                <button class="btn btn-block" (click)="changeTab(1)">Fundamentals</button>
+        </div>
+        <div class="flex-item">
+                <button class="btn btn-block" (click)="changeTab(2)">Technical</button>
+        </div>
+        <div class="flex-item" >
+                <button class="btn btn-block" (click)="changeTab(3)">Trends</button>
+        </div>
+    </div>
+
+    <div *ngIf="type == 1">
+
+        <div>
+            <h1 class="text-center">Fundamentals</h1>
+        </div>
+
+        <div class="tbl table-responsive">
+
+            <div class="anim" [ngClass]="{hide: table1[0] != undefined}">
+                <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+
+            <div class="tables" [ngClass]="{hide: table1[0] == undefined}">
+
+                <table class="table table-striped tb-l" *ngIf="table1[0] != null || table1[0] != undefined">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center;">{{table1[0].tableTitle}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of table1[0].tableData">
+                            <td>{{ row.first }}</td>
+                            <td>{{ row.second }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped tb-r" *ngIf="table1[1] != null || table1[1] != undefined">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center;">{{table1[1].tableTitle}}</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let row of table1[1].tableData">
+                            <td>{{ row.first }}</td>
+                            <td>{{ row.second }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped tb-l" *ngIf="table1[2] != undefined">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center;">{{table1[2].tableTitle}}</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let row of table1[2].tableData">
+                            <td>{{ row.first }}</td>
+                            <td>{{ row.second }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped tb-r" *ngIf="table1[3] != null || table1[3] != undefined">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center;">{{table1[3].tableTitle}}</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let row of table1[3].tableData">
+                            <td>{{ row.first }}</td>
+                            <td>{{ row.second }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="type == 2">
+
+
+        <div>
+            <h1 class="text-center">Technical</h1>
+        </div>
+
+        <div class="tbl table-responsive">
+            <div class="anim" [ngClass]="{hide: table2[0] != undefined}">
+                <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+
+            <div class="tables" [ngClass]="{hide: table2[0] == undefined}">
+                <div class="row">
+                    <table class="table table-striped tb-l-tech" *ngIf="table2[0] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="2" style="text-align: center;">{{table2[0].tableTitle}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of table2[0].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped tb-m" *ngIf="table2[1] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="3" style="text-align: center;">{{table2[1].tableTitle}}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let row of table2[1].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped tb-r-tech" *ngIf="table2[2] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="3" style="text-align: center;">{{table2[2].tableTitle}}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let row of table2[2].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row">
+                    <table class="table table-striped tb-l-tech" *ngIf="table2[3] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="3" style="text-align: center;">{{table2[3].tableTitle}}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let row of table2[3].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped tb-m" *ngIf="table2[4] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="3" style="text-align: center;">{{table2[4].tableTitle}}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let row of table2[4].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped tb-r-tech" *ngIf="table2[5] != undefined">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" colspan="3" style="text-align: center;">{{table2[5].tableTitle}}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let row of table2[5].tableData">
+                                <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="type == 3">
+
+        <div>
+            <h1 class="text-center">Trends</h1>
+        </div>
+
+        <div class="tbl table-responsive">
+            <div class="anim" [ngClass]="{hide: table3[0] != undefined}">
+                <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+
+            <div class="tables" [ngClass]="{hide: table3[0] == undefined}">
+
+                <div class="col">
+
+                    <div>
+                        <table class="table table-striped tb" *ngIf="table3[0] != undefined">
+                            <tbody>
+                                <tr *ngFor="let row of table3[0].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td>{{ row[1] }}</td>
+                                    <td>{{ row[2] }}</td>
+                                    <td>{{ row[3] }}</td>
+                                    <td>{{ row[4] }}</td>
+                                    <td>{{ row[5] }}</td>
+                                    <td>{{ row[6] }}</td>
+                                    <td>{{ row[7] }}</td>
+                                    <td>{{ row[8] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table3 table-striped tb" *ngIf="table3[1] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="3" style="text-align: center;">{{table3[1].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[1].tableData">
+                                    <td style="text-align: center;">{{ row[0] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb" *ngIf="table3[2] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="5" style="text-align: center;">{{table3[2].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[2].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[5] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[3] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="6" style="text-align: center;">{{table3[3].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[3].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[6] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[4] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[4].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[4].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 20px; align-content: center;">
+                        <button id="show" class="btn btn-primary " (click)="showMoreContent()">{{value}}</button>
+                    </div>
+                    <div *ngIf="showMore == 1">
+                        <table class="table table-striped tb " *ngIf="table3[5] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[5].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[5].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[6] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="6" style="text-align: center;">{{table3[6].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[6].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[6] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[7] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[7].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[7].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[8] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[8].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[8].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="table table-striped tb " *ngIf="table3[9] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[9].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[9].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[10] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[10].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[10].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[11] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[11].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[11].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="table table-striped tb" *ngIf="table3[12] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="5" style="text-align: center;">{{table3[12].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[12].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[5] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[13] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[13].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[13].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[14] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[14].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[14].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[15] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="5" style="text-align: center;">{{table3[15].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[15].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[5] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[16] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="5" style="text-align: center;">{{table3[16].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[16].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[5] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[18] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="4" style="text-align: center;">{{table3[18].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[18].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped tb " *ngIf="table3[19] != undefined">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" colspan="5" style="text-align: center;">{{table3[19].tableTitle}}
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let row of table3[19].tableData">
+                                    <td *ngIf="row.length > 1">{{ row[0] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[1] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[2] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[3] }}</td>
+                                    <td *ngIf="row.length > 1">{{ row[4] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
