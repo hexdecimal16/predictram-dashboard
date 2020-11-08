@@ -1,0 +1,823 @@
+<div class="row">
+  <div class="col-xxl-12">
+    <ngx-trend-companies></ngx-trend-companies>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="col-xxl-8">
+
+    <nb-card size="giant">
+
+      <nb-card-header>
+        <span>{{ trend.current.title }}</span>
+
+      </nb-card-header>
+
+      <div style="align-content: center;">
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let row of trend.one">
+                <td class="my-text">{{ row[0] }}</td>
+                <td class="my-text">{{ row[1] }}</td>
+                <td class="my-text">{{ row[2] }}</td>
+                <td class="my-text">{{ row[3] }}</td>
+                <td class="my-text">{{ row[4] }}</td>
+                <td class="my-text">{{ row[5] }}</td>
+                <td class="my-text">{{ row[6] }}</td>
+                <td class="my-text">{{ row[7] }}</td>
+                <td class="my-text">{{ row[8] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </nb-card>
+
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.three[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+          <div class="table-responsive">
+            <table class="table">
+            <tbody>
+              <tr>
+                <td class="my-text">Frequency</td>
+                <td class="my-text">{{ trend.three[1].Frequency[0] }}</td>
+                <td class="my-text">{{ trend.three[1].Frequency[1] }}</td>
+                <td class="my-text">{{ trend.three[1].Frequency[2] }}</td>
+                <td class="my-text">{{ trend.three[1].Frequency[3] }}</td>
+              </tr>
+              <tr>
+                <td class="my-text">Daily</td>
+                <td class="my-text">{{ trend.three[1].Daily[0] }}</td>
+                <td class="my-text">{{ trend.three[1].Daily[1] }}</td>
+                <td class="my-text">{{ trend.three[1].Daily[2] }}</td>
+                <td class="my-text">{{ trend.three[1].Daily[3] }}</td>
+              </tr>
+              <tr>
+                <td class="my-text">Weekly</td>
+                <td class="my-text">{{ trend.three[1].Weekly[0] }}</td>
+                <td class="my-text">{{ trend.three[1].Weekly[1] }}</td>
+                <td class="my-text">{{ trend.three[1].Weekly[2] }}</td>
+                <td class="my-text">{{ trend.three[1].Weekly[3] }}</td>
+              </tr>
+              <tr>
+                <td class="my-text">Monthly</td>
+                <td class="my-text">{{ trend.three[1].Monthly[0] }}</td>
+                <td class="my-text">{{ trend.three[1].Monthly[1] }}</td>
+                <td class="my-text">{{ trend.three[1].Monthly[2] }}</td>
+                <td class="my-text">{{ trend.three[1].Monthly[3] }}</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </nb-card>
+
+  </div>
+
+  <div class="col-xxl-4">
+
+    <nb-card size="giant">
+
+      <nb-card-header>
+        <span>{{ trend.two[0] }}</span>
+
+      </nb-card-header>
+
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr *ngFor="let row of trend.two[1]">
+              <td class="my-text">{{ row }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-xxl-6">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.four[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.four[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.four[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.four[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.four[1].Frequency[3] }}</td>
+              <td class="my-text">{{ trend.four[1].Frequency[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.four[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.four[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.four[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.four[1].Daily[3] }}</td>
+              <td class="my-text">{{ trend.four[1].Daily[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.four[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.four[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.four[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.four[1].Weekly[3] }}</td>
+              <td class="my-text">{{ trend.four[1].Weekly[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.four[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.four[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.four[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.four[1].Monthly[3] }}</td>
+              <td class="my-text">{{ trend.four[1].Monthly[4] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-6">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.seven[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[3] }}</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[4] }}</td>
+              <td class="my-text">{{ trend.seven[1].Frequency[5] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.seven[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.seven[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.seven[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.seven[1].Daily[3] }}</td>
+              <td class="my-text">{{ trend.seven[1].Daily[4] }}</td>
+              <td class="my-text">{{ trend.seven[1].Daily[5] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[3] }}</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[4] }}</td>
+              <td class="my-text">{{ trend.seven[1].Weekly[5] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[3] }}</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[4] }}</td>
+              <td class="my-text">{{ trend.seven[1].Monthly[5] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.six[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.six[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.six[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.six[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.six[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.six[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.six[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.six[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.six[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.six[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.six[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.six[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.six[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.six[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.six[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.six[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.six[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.five[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.five[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.five[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.five[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.five[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.five[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.five[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.five[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.five[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.five[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.five[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.five[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.five[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.five[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.five[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.five[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.five[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t17[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t17[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t17[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t17[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t17[1].Frequency[3] }}</td>
+              <td class="my-text">{{ trend.t17[1].Frequency[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t17[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t17[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t17[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t17[1].Daily[3] }}</td>
+              <td class="my-text">{{ trend.t17[1].Daily[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t17[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t17[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t17[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t17[1].Weekly[3] }}</td>
+              <td class="my-text">{{ trend.t17[1].Weekly[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t17[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t17[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t17[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t17[1].Monthly[3] }}</td>
+              <td class="my-text">{{ trend.t17[1].Monthly[4] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.eight[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.eight[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.eight[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.eight[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.eight[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.eight[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.eight[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.eight[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.eight[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.eight[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.eight[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.eight[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.eight[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.eight[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.eight[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.eight[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.eight[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.nine[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.nine[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.nine[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.nine[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.nine[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.nine[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.nine[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.nine[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.nine[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.nine[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.nine[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.nine[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.nine[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.nine[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.nine[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.nine[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.nine[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t10[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t10[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t10[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t10[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t10[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t10[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t10[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t10[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t10[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t10[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t10[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t10[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t10[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t10[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t10[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t10[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t10[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t11[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t11[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t11[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t11[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t11[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t11[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t11[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t11[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t11[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t11[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t11[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t11[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t11[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t11[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t11[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t11[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t11[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t12[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t12[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t12[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t12[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t12[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t12[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t12[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t12[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t12[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t12[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t12[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t12[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t12[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t12[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t12[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t12[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t12[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t13[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t13[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t13[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t13[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t13[1].Frequency[3] }}</td>
+              <td class="my-text">{{ trend.t13[1].Frequency[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t13[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t13[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t13[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t13[1].Daily[3] }}</td>
+              <td class="my-text">{{ trend.t13[1].Daily[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t13[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t13[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t13[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t13[1].Weekly[3] }}</td>
+              <td class="my-text">{{ trend.t13[1].Weekly[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t13[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t13[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t13[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t13[1].Monthly[3] }}</td>
+              <td class="my-text">{{ trend.t13[1].Monthly[4] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t14[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t14[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t14[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t14[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t14[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t14[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t14[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t14[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t14[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t14[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t14[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t14[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t14[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t14[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t14[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t14[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t14[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t15[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t15[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t15[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t15[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t15[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t15[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t15[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t15[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t15[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t15[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t15[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t15[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t15[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t15[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t15[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t15[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t15[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-4">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t16[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t16[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t16[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t16[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t16[1].Frequency[3] }}</td>
+              <td class="my-text">{{ trend.t16[1].Frequency[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t16[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t16[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t16[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t16[1].Daily[3] }}</td>
+              <td class="my-text">{{ trend.t16[1].Daily[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t16[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t16[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t16[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t16[1].Weekly[3] }}</td>
+              <td class="my-text">{{ trend.t16[1].Weekly[4] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t16[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t16[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t16[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t16[1].Monthly[3] }}</td>
+              <td class="my-text">{{ trend.t16[1].Monthly[4] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+
+
+  <div class="col-xxl-6">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t18[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Frequency</td>
+              <td class="my-text">{{ trend.t18[1].Frequency[0] }}</td>
+              <td class="my-text">{{ trend.t18[1].Frequency[1] }}</td>
+              <td class="my-text">{{ trend.t18[1].Frequency[2] }}</td>
+              <td class="my-text">{{ trend.t18[1].Frequency[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Daily</td>
+              <td class="my-text">{{ trend.t18[1].Daily[0] }}</td>
+              <td class="my-text">{{ trend.t18[1].Daily[1] }}</td>
+              <td class="my-text">{{ trend.t18[1].Daily[2] }}</td>
+              <td class="my-text">{{ trend.t18[1].Daily[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Weekly</td>
+              <td class="my-text">{{ trend.t18[1].Weekly[0] }}</td>
+              <td class="my-text">{{ trend.t18[1].Weekly[1] }}</td>
+              <td class="my-text">{{ trend.t18[1].Weekly[2] }}</td>
+              <td class="my-text">{{ trend.t18[1].Weekly[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">Monthly</td>
+              <td class="my-text">{{ trend.t18[1].Monthly[0] }}</td>
+              <td class="my-text">{{ trend.t18[1].Monthly[1] }}</td>
+              <td class="my-text">{{ trend.t18[1].Monthly[2] }}</td>
+              <td class="my-text">{{ trend.t18[1].Monthly[3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+  <div class="col-xxl-6">
+    <nb-card size="giant">
+      <nb-card-header>
+        <span>{{ trend.t20[0] }}</span>
+      </nb-card-header>
+      <div style="align-content: center;">
+        <table class="table table-responsive">
+          <tbody>
+            <tr>
+              <td class="my-text">Period</td>
+              <td class="my-text">{{ trend.t20[1].Period[0] }}</td>
+              <td class="my-text">{{ trend.t20[1].Period[1] }}</td>
+              <td class="my-text">{{ trend.t20[1].Period[2] }}</td>
+              <td class="my-text">{{ trend.t20[1].Period[3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">5 Days</td>
+              <td class="my-text">{{ trend.t20[1]["5 Days"][0] }}</td>
+              <td class="my-text">{{ trend.t20[1]["5 Days"][1] }}</td>
+              <td class="my-text">{{ trend.t20[1]["5 Days"][2] }}</td>
+              <td class="my-text">{{ trend.t20[1]["5 Days"][3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">10 Days</td>
+              <td class="my-text">{{ trend.t20[1]["10 Days"][0] }}</td>
+              <td class="my-text">{{ trend.t20[1]["10 Days"][1] }}</td>
+              <td class="my-text">{{ trend.t20[1]["10 Days"][2] }}</td>
+              <td class="my-text">{{ trend.t20[1]["10 Days"][3] }}</td>
+            </tr>
+            <tr>
+              <td class="my-text">14 Days</td>
+              <td class="my-text">{{ trend.t20[1]["14 Days"][0] }}</td>
+              <td class="my-text">{{ trend.t20[1]["14 Days"][1] }}</td>
+              <td class="my-text">{{ trend.t20[1]["14 Days"][2] }}</td>
+              <td class="my-text">{{ trend.t20[1]["14 Days"][3] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nb-card>
+  </div>
+
+</div>

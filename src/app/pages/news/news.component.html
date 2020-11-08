@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div class="col-xxl-6">
+    <nb-card>
+      <nb-card-header>
+          <span>
+            MoneyControl News
+          </span>
+      </nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let n of news.mc" (click)="open(n[3])">
+          <span *ngIf="n[2] == 'positive'" style="color: green;">{{ n[0] }}</span>
+          <span *ngIf="n[2] == 'netural'" >{{ n[0] }}</span>
+          <span *ngIf="n[2] == 'negative'" style="color: red;">{{ n[0] }}</span>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+
+  </div>
+  <div class="col-xxl-6">
+    <nb-card>
+      <nb-card-header>
+        <span>
+          CNBC18 News
+        </span>
+      </nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let n of news.cn" (click)="open(n[0])">
+          <span *ngIf="n[2] == 'positive'" style="color: green;">{{ n[1][0] }}</span>
+          <span *ngIf="n[2] == 'netural'" >{{ n[1][0] }}</span>
+          <span *ngIf="n[2] == 'negative'" style="color: red;">{{ n[1][0] }}</span>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>
+</div>

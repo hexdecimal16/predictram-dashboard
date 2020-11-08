@@ -1,0 +1,24 @@
+<nb-card size="medium">
+
+  <nb-card-header>
+      <span>Companies</span>
+
+      <span style="cursor: pointer; color: blue;" (click)="clear()">Clear {{ query }}</span>
+
+  </nb-card-header>
+
+  <nb-list class="user-activity-list">
+      <nb-list-item *ngFor="let company of company; let i = index" (click)="fundamental.currentCompany(company)" style="cursor: pointer;">
+
+          <div class="visited-date">
+            {{ company.id }}
+          </div>
+    
+          <div class="visited-pages-count" >
+            <div class="value" style="text-align: start;">{{ company.title }}</div>
+          </div>
+    
+        </nb-list-item>
+  </nb-list>
+
+</nb-card>

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-xxl-12">
+    <nb-card>
+      <table  class="table table-striped">
+        <thead >
+            <ng-container  *ngFor="let row of corporate.corporateTable[0].tableTitle">
+                <th *ngIf="row[0] != ''" class="my-text">{{ row[0] }}</th>
+                <th *ngIf="row[1] != ''" class="my-text">{{ row[1] }}</th>
+                <th *ngIf="row[2] != ''" class="my-text">{{ row[2] }}</th>
+                <th *ngIf="row[3] != ''" class="my-text">{{ row[3] }}</th>
+                <th *ngIf="row[4] != ''" class="my-text">{{ row[4] }}</th>
+                <th *ngIf="row[5] != ''" class="my-text">{{ row[5] }}</th>
+                <th *ngIf="row[6] != ''" class="my-text">{{ row[6] }}</th>
+                <th *ngIf="row[7] != ''" class="my-text">{{ row[7] }}</th>
+                <th *ngIf="row[8] != ''" class="my-text">{{ row[8] }}</th>
+                <th *ngIf="row[9] != ''" class="my-text">{{ row[9] }}</th>
+            </ng-container>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of corporate.corporateTable[0].tableData;  let i = index">
+                <td *ngIf="row[0] != '' && i != 0" class="my-text">{{ row[0] }}</td>
+                <td *ngIf="row[1] != '' && i != 0" class="my-text">{{ row[1] }}</td>
+                <td *ngIf="row[2] != '' && i != 0" class="my-text">{{ row[2] }}</td>
+                <td *ngIf="row[3] != '' && i != 0" class="my-text">{{ row[3] }}</td>
+                <td *ngIf="row[4] != '' && i != 0" class="my-text">{{ row[4] }}</td>
+                <td *ngIf="row[5] != '' && i != 0" class="my-text">{{ row[5] }}</td>
+                <td *ngIf="row[6] != '' && i != 0" class="my-text">{{ row[6] }}</td>
+                <td *ngIf="row[7] != '' && i != 0" class="my-text">{{ row[7] }}</td>
+                <td *ngIf="row[8] != '' && i != 0" class="my-text">{{ row[8] }}</td>
+                <td *ngIf="row[9] != '' && i != 0" class="my-text">{{ row[9] }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </nb-card>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <ngx-nifty-companies></ngx-nifty-companies>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-lg-4 col-xxxl-3">
+          <nb-alert status="info">{{ niftyService.current }}</nb-alert>
+    </div>  
+</div>
+  
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <table class="table table-striped table-bordered table-hover tbl">
+                <thead>
+                    <tr *ngFor="let head of niftyService.tableHead">
+                        <th scope="col" class="my-text">{{head[0]}}</th>
+                        <th scope="col" class="my-text">{{head[1]}}</th>
+                        <th scope="col" class="my-text">{{head[2]}}</th>
+                        <th scope="col" class="my-text">{{head[3]}}</th>
+                        <th scope="col" class="my-text">{{head[4]}}</th>
+                        <th scope="col" class="my-text">{{head[5]}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let body of niftyService.table">
+                        <td class="my-text">{{body[0]}}</td>
+                        <td class="my-text">{{body[1]}}</td>
+                        <td class="my-text">{{body[2]}}</td>
+                        <td class="my-text">{{body[3]}}</td>
+                        <td class="my-text">{{body[4]}}</td>
+                        <td class="my-text">{{body[5]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </nb-card>
+    </div>
+</div>

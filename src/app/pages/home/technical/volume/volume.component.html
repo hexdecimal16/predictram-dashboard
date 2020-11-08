@@ -1,0 +1,52 @@
+<nb-card size="medium">
+
+    <nb-card-header>
+        <span>Price / Volume Action</span>
+
+    </nb-card-header>
+
+    <nb-list class="user-activity-list">
+        <nb-list-item class="item">
+            <span>Code</span>
+            <span>{{ technical.volume["Code"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>EOD Share Price</span>
+            <span>{{ technical.volume["EOD Share Price"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Previous Share Price</span>
+            <span>{{ technical.volume["Previous Share Price"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Price Change</span>
+            <span>{{ technical.volume["Price Change"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Change %</span>
+            <span>{{ technical.volume["Change %"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Volume</span>
+            <span>{{ technical.volume["Volume"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Five Day Avg Vol</span>
+            <span>{{ technical.volume["Five Day Avg Vol"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Beta</span>
+            <span>{{ technical.volume["Beta"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Fno Stock</span>
+            <span>{{ technical.volume["Fno Stock"]}}</span>
+        </nb-list-item>
+        <nb-list-item class="item">
+            <span>Last Business Date</span>
+            <span>{{ technical.volume["Last Business Date"]}}</span>
+        </nb-list-item>
+    </nb-list>
+
+
+</nb-card>
